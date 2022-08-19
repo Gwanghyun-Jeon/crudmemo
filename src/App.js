@@ -67,7 +67,7 @@ function App() {
       { modalOpen ? <CreateMemo searchWord={searchWord} setSearchWord={setSearchWord} memoList={memoList} setMemoList={setMemoList} setModalOpen={setModalOpen}/> : ''}
       { modiOpen ? <ModiMemo modiMemo={modiMemo} setModiMemo={setModiMemo} memoList={memoList} setMemoList={setMemoList} setModiOpen={setModiOpen}/> : ''}
       <header>
-        <SearchBar onChange={(e) => setSearchWord(e.target.value)} value={searchWord} />
+        <SearchBar onChange={(e) => setSearchWord(e.target.value)} value={searchWord} onKeyPress={(e) => {if(e.key === "Enter"){setModalOpen(true)}}}/>
         {addButton ? <AddButton onClick={() => setModalOpen(true)}>해당 키워드로 메모 추가</AddButton> : ''}
       </header>
     </div>

@@ -9,8 +9,7 @@ const Background = styled.div`
     bottom: 0;
     background: #00000080;
     z-index: 10000;
-`
-
+`;
 const Box = styled.div`
     position: absolute;
         top: 50%;
@@ -26,7 +25,6 @@ const Box = styled.div`
     align-items: center;
     flex-direction: column;
 `;
-
 const TitleLine = styled.input`
     font-size: 30px;
     font-weight: 900;
@@ -38,7 +36,7 @@ const TitleLine = styled.input`
     border:none;
     border-radius: 10px;
     /* box-shadow: 10px 10px 10px 2px black; */
-`
+`;
 const BodyLine = styled.textarea`
     /* text-align: left; */
     font-size: 20px;
@@ -49,11 +47,11 @@ const BodyLine = styled.textarea`
     border:none;
     border-radius: 10px;
     /* box-shadow: 10px 10px 10px 2px #FFB200; */
-`
+`;
 const ButtonLine = styled.div`
     text-align: right;
     width: 70%;
-`
+`;
 
 export default function CreateMemo ({memoList, setMemoList, setModalOpen, searchWord, setSearchWord}){
     const [newTitle, setNewTitle] = useState('');
